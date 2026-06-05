@@ -1,0 +1,19 @@
+services:
+  - type: web
+    name: daga-clone
+    env: node
+    buildCommand: npm install
+    startCommand: node server/index.js
+    envVars:
+      - key: PORT
+        value: 10000
+      - key: JWT_SECRET
+        generateValue: true
+      - key: ADMIN_USER
+        value: admin
+      - key: ADMIN_PASS
+        value: admin123
+      - key: DB_PATH
+        value: ./data/database.db
+      - key: ADMIN_PATH
+        value: 6n1x5ltwujr5

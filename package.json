@@ -1,0 +1,21 @@
+{
+  "name": "daga-clone",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "node server/index.js",
+    "dev:frontend": "cd frontend && npx vite",
+    "init-db": "node server/init-db.js",
+    "build": "cd frontend && npm install && npm run build",
+    "start": "node server/index.js",
+    "postinstall": "npm run build"
+  },
+  "dependencies": {
+    "express": "^4.18.2",
+    "cors": "^2.8.5",
+    "sql.js": "^1.9.0",
+    "jsonwebtoken": "^9.0.2",
+    "bcryptjs": "^2.4.3",
+    "dotenv": "^16.3.1"
+  }
+}
