@@ -3,12 +3,13 @@ FROM node:20-slim
 WORKDIR /app
 
 COPY package*.json ./
-RUN npm install
+RUN npm install --ignore-scripts
 
 COPY frontend/package*.json frontend/
 RUN cd frontend && npm install
 
-COPY . .
+COPY server/ server/
+COPY frontend/ frontend/
 RUN cd frontend && npm run build
 
 EXPOSE 3000

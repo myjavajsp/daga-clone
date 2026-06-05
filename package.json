@@ -8,7 +8,7 @@
     "init-db": "node server/init-db.js",
     "build": "cd frontend && npm install && npm run build",
     "start": "node server/index.js",
-    "postinstall": "npm run build"
+    "docker-build": "cd frontend && npm install && npm run build"
   },
   "dependencies": {
     "express": "^4.18.2",
